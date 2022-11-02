@@ -8,7 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Scritps\20220610\" />
+    <None Remove="Scritps\20220610\001_Create_Table_TeacherMaster.sql" />
+    <None Remove="Scritps\20220610\002_Create_Table_DesignationMaster.sql" />
+    <None Remove="Scritps\20220610\003_Fill_DesignationMaster.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Scritps\20220610\001_Create_Table_TeacherMaster.sql" />
+    <EmbeddedResource Include="Scritps\20220610\002_Create_Table_DesignationMaster.sql" />
+    <EmbeddedResource Include="Scritps\20220610\003_Fill_DesignationMaster.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Scritps\20220615\" />
   </ItemGroup>
 

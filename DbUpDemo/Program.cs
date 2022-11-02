@@ -22,10 +22,14 @@ namespace DbUpDemo
             var upgrader =
                 DeployChanges.To
                     .SqlDatabase(connectionString)
-                    .WithScriptsFromFileSystem(folderPath, new FileSystemScriptOptions
-                    {
-                        IncludeSubDirectories = true
-                    })
+                    // 埋め込みリソースを使う場合に使用する
+                    .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
+
+                    // 指定ディレクトリの全てを対象にする場合に使用する
+                    //.WithScriptsFromFileSystem(folderPath, new FileSystemScriptOptions
+                    //{
+                    //    IncludeSubDirectories = true
+                    //})
                     .LogToConsole()
                     .Build();
 
